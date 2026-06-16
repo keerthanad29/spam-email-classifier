@@ -56,5 +56,4 @@ Open `Spam_Email_Classifier.ipynb` in Jupyter or Google Colab.
 
 > 📌 Dataset: Download from [Kaggle - SMS Spam Collection](https://www.kaggle.com/datasets/uciml/sms-spam-collection-dataset) and place as `spam.csv`
 
-## 👩‍💻 Author
-**Keerthana Dharmaraj** — [GitHub](https://github.com/keerthanad29)
+
