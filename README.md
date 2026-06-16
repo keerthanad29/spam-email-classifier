@@ -1,69 +1,60 @@
-📧 Spam Email Classifier – NLP Machine Learning Project
+# Spam Email Classifier 📧
+> NLP-based classifier that detects spam emails with 97.13% accuracy using Multinomial Naive Bayes.
 
-The Spam Email Classifier is a machine learning project built using Natural Language Processing (NLP) techniques to automatically detect whether an email or message is Spam or Not Spam (Ham). With the rising volume of digital communication, spam filtering is essential for security, fraud prevention, and inbox management. This project builds a complete end-to-end pipeline, from preprocessing raw text to final message prediction.
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![NLTK](https://img.shields.io/badge/NLTK-009900?style=for-the-badge&logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
 
-📝 Project Overview
+---
 
-This project demonstrates how machine learning can classify textual data by leveraging NLP preprocessing and probabilistic algorithms. The workflow begins with cleaning raw email text, removing unnecessary elements such as punctuation, stopwords, special characters, and converting text into meaningful tokens.
+## 📌 Objective
+Automatically classify emails and SMS messages as Spam or Ham using NLP preprocessing and probabilistic ML.
 
-After preprocessing, text is transformed into numerical form using TF-IDF Vectorization, which effectively captures the importance of words across messages. These vectorized features are fed into a Multinomial Naive Bayes classifier — one of the most effective and widely used algorithms for text classification.
+## 📊 Dataset
+- 5,572 messages | Binary classification (Spam / Ham)
+- Source: SMS Spam Collection Dataset
 
-The model is evaluated using Accuracy, Precision, Recall, and F1-Score, with its overall performance visualized through a Confusion Matrix Heatmap. Additionally, the project includes a feature that allows users to input their own messages and instantly receive predictions, demonstrating real-world applicability.
+## 📈 Model Performance
 
-This project highlights core concepts of NLP, feature engineering, supervised learning, and model evaluation, making it an ideal addition to any machine learning or data science portfolio.
+| Metric | Score |
+|--------|-------|
+| ✅ Accuracy | 97.13% |
+| 🎯 Precision | 85.11% |
+| 🔁 Recall | 95.33% |
+| 📈 F1 Score | 89.94% |
 
-🎯 Objectives
+## 🛠 Tech Stack
+- Python | Pandas | NumPy
+- Scikit-learn | NLTK
+- Matplotlib | Seaborn
 
-Clean and preprocess raw message text
+## 🔍 Methodology
+1. Load & explore SMS Spam Collection dataset
+2. Clean text — lowercase, remove punctuation, stopwords
+3. Convert text to vectors using **TF-IDF Vectorizer** (bigrams)
+4. Train **Multinomial Naive Bayes** classifier
+5. Evaluate using Accuracy, Precision, Recall, F1-Score
+6. Predict new messages in real time
 
-Convert text into numerical features using TF-IDF
+## 📉 Confusion Matrix
+![Confusion Matrix](images/confusion_matrix.png)
 
-Train a Multinomial Naive Bayes classifier
+## 🧪 Sample Predictions
 
-Evaluate the model using standard ML metrics
+| Message | Prediction |
+|---------|-----------|
+| "Congratulations! You've won a free lottery. Claim now." | 🔴 Spam |
+| "Are you coming to office today?" | 🟢 Ham |
+| "Free vacation offer only for you!" | 🔴 Spam |
 
-Visualize confusion matrix for better understanding
+## ▶️ How to Run
+```bash
+pip install -r requirements.txt
+```
+Open `Spam_Email_Classifier.ipynb` in Jupyter or Google Colab.
 
-Predict new/unseen messages entered by the user
+> 📌 Dataset: Download from [Kaggle - SMS Spam Collection](https://www.kaggle.com/datasets/uciml/sms-spam-collection-dataset) and place as `spam.csv`
 
-📂 Dataset Used
-
-The project uses the SMS/Email Spam Collection Dataset, which contains:
-
-label — spam or ham
-
-message — text content of each email/SMS
-
-🔄 Project Workflow
-
-Load dataset with Pandas
-
-Clean and preprocess the message text
-
-Apply TF-IDF vectorization
-
-Split dataset into training and testing sets
-
-Train Naive Bayes classifier
-
-Make predictions
-
-Evaluate performance
-
-Plot confusion matrix
-
-Predict custom email messages in real time
-
-📊 Model Visualization
-🔹 Confusion Matrix Heatmap
-
-This heatmap clearly shows how many emails were correctly and incorrectly classified.
-
-📬 Sample Predictions
-Message	Model Output
-“Congratulations! You won a $500 prize! Click here to claim.”	Spam
-“Hello, the report for tomorrow’s meeting is attached.”	Ham
-“Your bank account is at risk. Confirm your identity immediately.”	Spam
-“Your order has been shipped and will arrive tomorrow.”	Ham
-
-These examples highlight how effectively the model identifies real-world spam patterns.
+## 👩‍💻 Author
+**Keerthana Dharmaraj** — [GitHub](https://github.com/keerthanad29)
